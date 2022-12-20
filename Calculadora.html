@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta author="Maciel Oliveira" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+
+      .card {
+        width: 30%;
+        margin: 50px auto;
+        background-color: cadetblue;
+        padding: 20px;
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: 10px 10px 10px gray;
+      }
+
+      .card h1 {
+        color: white;
+        font-weight: 300px;
+      }
+
+      .card input {
+        width: 100%;
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+      }
+
+      .card button {
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 5px;
+      }
+
+      .card button:hover {
+        cursor: pointer;
+        background-color: darkgrey;
+        color: white;
+        font-weight: 800;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Projeto Calculadora</h1>
+      <div>
+        <input type="number" placeholder="Numero 1" id="numero1" />
+      </div>
+
+      <div>
+        <input type="number" placeholder="Numero 2" id="numero2" />
+      </div>
+
+      <button onclick="somar()">+</button>
+      <button onclick="subtrair()">-</button>
+      <button onclick="multiplicar()">x</button>
+      <button onclick="dividir()">/</button>
+    </div>
+  </body>
+  <script>
+    function somar() {
+      let n1String = document.getElementById("numero1").value;
+      let n2String = document.getElementById("numero2").value;
+
+      let n1Convertido = parseFloat(n1String);
+      let n2Convertido = parseFloat(n2String);
+
+      let soma = n1Convertido + n2Convertido;
+
+      window.alert("O reseultado é: " + soma);
+    }
+      function subtrair() {
+      let n1String = document.getElementById("numero1").value;
+      let n2String = document.getElementById("numero2").value;
+
+      let n1Convertido = parseFloat(n1String);
+      let n2Convertido = parseFloat(n2String);
+
+      let subtracao = n1Convertido - n2Convertido;
+
+      window.alert("O reseultado é: " + subtracao);
+    }
+
+    function multiplicar() {
+      let n1String = document.getElementById("numero1").value;
+      let n2String = document.getElementById("numero2").value;
+
+      let n1Convertido = parseFloat(n1String);
+      let n2Convertido = parseFloat(n2String);
+
+      let multiplicacao = n1Convertido * n2Convertido;
+
+      window.alert("O reseultado é: " + multiplicacao);
+    }
+
+      function dividir() {
+      let n1String = document.getElementById("numero1").value;
+      let n2String = document.getElementById("numero2").value;
+
+      let n1Convertido = parseFloat(n1String);
+      let n2Convertido = parseFloat(n2String);
+
+      let divisao = n1Convertido / n2Convertido;
+
+      window.alert("O reseultado é: " + divisao);
+      }
+
+  </script>
+  </body>
+</html>
